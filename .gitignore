@@ -2,6 +2,7 @@
 /dist
 /tmp
 /out-tsc
+/screenshots
 
 # dependencies
 /node_modules
@@ -40,3 +41,16 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.env
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+allure-results/
+allure-report/
+tests/uiComponentc.spec.ts-snapshots
+

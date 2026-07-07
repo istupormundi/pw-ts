@@ -1,6 +1,7 @@
 import {test} from '@playwright/test'
 import {PageManager} from '../page-objects/pageManager'
 import {faker} from '@faker-js/faker'
+import { argosScreenshot } from "@argos-ci/playwright";
 
 test.beforeEach(async({page}) => {
     await page.goto('/')
@@ -9,7 +10,9 @@ test.beforeEach(async({page}) => {
 test('navigate to Form page', async ({page}) => {
     const pageManager = new PageManager(page)
     await pageManager.navigateTo().formLayoutsPage()
+    await argosScreenshot(page, "forLayoutsPage")
     await pageManager.navigateTo().datePickerPage()
+    await argosScreenshot(page, "datePickerPage")
 })
 
 test('parameterized methos', async({page}) => {

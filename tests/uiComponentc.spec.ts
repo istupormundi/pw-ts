@@ -33,7 +33,7 @@ test.describe('Form Layouts page', () => {
         await expect(inputEmail).toHaveValue(exp)
     })
 
-    test.only('radio buttons', async({page}) => {
+    test('radio buttons', async({page}) => {
         //await page.locator('nb-radio :text-is("Option 1")').click()
         const usingTheGridForm = page.locator('nb-card', {hasText: "Using the Grid"})
 
